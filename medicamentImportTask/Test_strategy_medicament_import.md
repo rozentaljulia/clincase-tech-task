@@ -413,7 +413,7 @@ I think this strategy provides comprehensive coverage for the feature's function
 Based on the error-guessing techniques here are some potential risks and strategies to minimize them:
 
 - _Data integrity_: Errors during import could lead to missing or incorrect medication data in the system. In this case, we should have some **data rollback plan** to rollback the changes and prevent corrupt data.
-- _Invalid CSV data _: We covered with our test strategy most of the cases but it is worth also considering improvement in error messages by providing users with informative error messages and clear documentation or tutorials
+- _Invalid CSV data_: We covered with our test strategy most of the cases but it is worth also considering improvement in error messages by providing users with informative error messages and clear documentation or tutorials
 - _Performance and Scalability_: to avoid performance issues and scalability we should evaluate the system's ability to handle increased data volume over time by executing non-functional tests.
 - _Parsing errors_: Upload file with missing delimiters, incorrect quotation marks, or invalid characters can lead to parsing errors thus we need to implement strong parsing logic that can handle different corner cases for example: extra spaces, empty lines (via integration tests)
 
