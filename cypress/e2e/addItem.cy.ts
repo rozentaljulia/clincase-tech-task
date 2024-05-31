@@ -1,3 +1,5 @@
+//  In all my tests I assume the initial state of the app is 3 ToDo items
+
 describe("Add item", () => {
   before(() => {
     cy.visit("https://ram-react-todo.stackblitz.io/");
