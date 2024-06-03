@@ -1,29 +1,38 @@
 # Introdaction:
 
-This repository is a tech challenge for Clincase company.
+This repository is a tech challenge for `Clincase` company.
 The challenge has two parts:
 
-- ### Automation challenge
+### Automation challenge
 
-  The task was to write add and complete item tests for the Todo list application:https://ram-react-todo.stackblitz.io/
+The task was to write automated tests for the [Todo list application](https://ram-react-todo.stackblitz.io/)
 
-  The initianal state of the application is 3 items inside the list.
-  When the user clicks on te item- the item marked as completed. There is an option to move between Completed /Active and All tabs.
+The initial state of the application:
 
-  For this asasgiment I chosen Cypress testing framework as I had expirience witht his tool. Additionaly, Cypress is one of the most popular testing framework which has greate comunity, features and allows both - developers and testers to write different types of tests (e2e, component, API).
+- 3 items inside the list
+- default tab is "All"
 
-#### Installation
+When the user clicks on the item, the item is marked as completed. There is an option to move between `Completed`, `Active`, and `All` tabs.
 
-Before running the tests :
+For this assignment I used Cypress testing framework as I had experience with his tool. Additionally, Cypress is one of the most popular testing framework which has great community support, rich features set, and allows both developers and testers to write different types of tests (`e2e`, `component`, `API`).
 
-1. Node.js should be installed and your machine.
-2. `run npm init`
-   or a node_modules folder or the root of your project should have package.json file to ensure cypress is installed in the correct directory.
-3. run `npm install cypress --save-dev`
-4. run `npm run cy:run` (or run this script from package.json)
+#### Running tests
 
-- ### Testing strategy challenge (medicamentImportTask)
+Prerequisites:
 
-  The task focuses on creating test strategy for Medicament inventory CSV importer.The feature allows to the doctors with a suitable permisions to import big CSV files with medicaments into the system and not inserting it manually.
+- Node.js should be installed on your machine.
+- Cypress test framework
+- This repository with test
 
-  The test strategy I present outlines the approach to verifying the functionality of importing medication lists via CSV file, test techniques, test cases, automation recomendations risks detection and enhensments.
+To run test suites type:
+
+```
+cd <THIS REPOSITORY>
+npm run cy:e2e
+```
+
+### Testing strategy challenge (medicamentImportTask)
+
+The task focuses on creating a test strategy for `Medicament inventory CSV importer`. The feature allows to doctors with suitable permissions to import CSV files with medicaments into the system and not inserting them manually.
+
+[The test strategy](./medicamentImportTask/Test_strategy_medicament_import.md) outlines the approach, test techniques, test cases, automation recomendations risks detection and enhancements.
