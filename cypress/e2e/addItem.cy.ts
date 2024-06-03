@@ -15,7 +15,7 @@ describe("Add item", () => {
     const todoList = cy.get(".todo-item");
     todoList.should("have.length", 4);
 
-    todoList.should("contain", "Add a new test");
+    todoList.last().should("contain", "Add a new test");
 
     cy.findByText("4 items left").should("exist");
   });

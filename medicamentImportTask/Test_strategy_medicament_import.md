@@ -404,6 +404,12 @@ Import fails when the files include items that already were imported previously.
 
 The import process fails with an error indicating that the items already exist.
 
+## Exit Criteria:
+
+1. All positive and negative test cases have been executed with the expected results.
+2. Identified defects have been fixed and retested successfully.
+3. The medication import functionality meets the acceptance criteria defined in the user story.
+
 ### Why this strategy?
 
 I think this strategy provides comprehensive coverage for the feature's functionality and achieves a high level of confidence in the CSV import function's ability to handle different scenarios effectively.

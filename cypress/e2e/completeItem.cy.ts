@@ -16,7 +16,7 @@ describe("Complete item", () => {
     cy.findByLabelText("Build a React App").should("not.exist");
   });
 
-  it("un-marks an item as completed", () => {
+  it("Clicks on item un-marks an item as completed", () => {
     cy.findByLabelText("Build a React App").click();
     cy.findByText("2 items left").should("exist");
 

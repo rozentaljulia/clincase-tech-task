@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "cy:run": "cypress run --browser chrome"
+    "cy:e2e": "cypress run --browser chrome --headless"
   },
   "author": "",
   "license": "ISC",
