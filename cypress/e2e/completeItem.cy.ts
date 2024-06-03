@@ -4,29 +4,33 @@ describe("Complete item", () => {
     localStorage.setItem("confirmedRunPrompt", "true");
   });
 
+  function item(label) {
+    return cy.get("ul .todo-item").contains(label);
+  }
+
   it("Clicking on the item completes it and moves to Complete tab", () => {
-    cy.findByLabelText("Build a React App").click();
-
-    cy.findByText("2 items left").should("exist");
-
+    item("Build a React App").click();
     cy.findByText("Completed").click();
-    cy.findByLabelText("Build a React App").should("exist");
 
-    cy.findByText("Active").click();
-    cy.findByLabelText("Build a React App").should("not.exist");
+    item("Build a React App").should("exist");
+
+    cy.findAllByText("Active").click();
+    item("Build a React App").should("not.exist");
   });
 
   it("Clicks on item un-marks an item as completed", () => {
-    cy.findByLabelText("Build a React App").click();
+    item("Build a React App").click();
     cy.findByText("2 items left").should("exist");
 
-    cy.findByLabelText("Build a React App").click();
+    item("Build a React App").click();
     cy.findByText("3 items left").should("exist");
 
     cy.findByText("Completed").click();
-    cy.findByLabelText("Build a React App").should("not.exist");
+    const completedItemsList = cy.get("ul .todo-item");
+    completedItemsList.should("not.exist");
+    cy.findByText("There are no items.").should("exist");
 
     cy.findByText("Active").click();
-    cy.findByLabelText("Build a React App").should("exist");
+    item("Build a React App").should("exist");
   });
 });
